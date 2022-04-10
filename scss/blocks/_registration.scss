@@ -1,0 +1,165 @@
+.registration{
+    &__wpr {
+        background-color: $pink-bkg;
+    }
+    
+    &__title {
+        font-weight   : 400;
+        font-size     : 24px;
+        line-height   : 29px;
+        display       : flex;
+        text-transform: uppercase;
+        height        : 148px;
+        align-items   : center;
+        color         : $border;
+    }
+    
+    &__perks-list {
+        margin    : 0;
+        list-style: none;
+    }
+    
+    &__perks-item {
+        position: relative;
+    }
+    
+    &__perks-item:before {
+        content: '';
+        width  : 15px;
+        height : 15px;
+    
+        position        : absolute;
+        top             : 5px;
+        left            : -25px;
+        background-image: url(../img/registration/perks.png);
+        background-size : 15px 15px;
+    }
+    
+    &__flex {
+        display        : flex;
+        justify-content: space-between;
+        margin-top     : 64px;
+    }
+    
+    &__form {
+        max-width     : 360px;
+        display       : flex;
+        flex-direction: column;
+    }
+    
+    
+    &__form-group {
+        display       : flex;
+        flex-direction: column;
+    }
+    
+    &__perks {
+        display       : flex;
+        flex-direction: column;
+    }
+    
+    &__form-title {
+        text-transform: capitalize;
+        font-weight   : 300;
+        font-size     : 16px;
+        line-height   : 19px;
+        color         : $black-bkg;
+        margin-bottom : 20px;
+    }
+    
+    &__form-input {
+        border        : 1px solid $text;
+        text-transform: capitalize;
+        padding-left  : 10px;
+        font-weight   : 300;
+        font-size     : 13px;
+        line-height   : 16px;
+        height        : 45px;
+        margin-bottom : 20px;
+        color         : $text;
+    }
+    
+    &__form-checkbox {
+        margin       : 10px 0 30px 0;
+        font-weight  : 300;
+        font-size    : 11px;
+        line-height  : 13px;
+        border-radius: 50%;
+    }
+    &__form-text:first-letter{
+        text-transform: uppercase;
+       
+    }
+    &__form-text {
+        font-weight  : 300;
+        font-size    : 13px;
+        line-height  : 16px;
+        color        : $text;
+        margin-bottom: 40px;
+    }
+    
+    &__form-btn {
+        width           : 167px;
+        background-color: $border;
+        border          : 1px solid $pink-color;
+        font-size       : 14px;
+        line-height     : 17px;
+        text-transform  : uppercase;
+        padding         : 16px 20px;
+        color           : $white-color;
+        margin-bottom   : 95px;
+    }
+    &__form-btn:hover,
+    &__form-btn:focus{
+        border: 1px solid $black-bkg;
+        background-color: transparent;
+        color: $black-bkg;
+    }
+    &__form-btn:active{
+        opacity: 0.7;
+    }
+    
+    
+    &__form-btn:hover .button__svg,
+    &__form-btn:focus .button__svg{
+    fill: $black-bkg;
+    }
+    
+    &__perks {
+        max-width: 652px;
+    }
+    
+    &__perks-title {
+        text-transform: uppercase;
+        font-weight   : 300;
+        font-size     : 24px;
+        line-height   : 29px;
+        margin-bottom : 22px;
+    }
+    
+    &__perks-text {
+        font-weight  : 300;
+        font-size    : 24px;
+        line-height  : 29px;
+        margin-bottom: 22px;
+    }
+    
+    &__perks-text::first-letter {
+        text-transform: uppercase;
+    }
+    
+    &__perks-list {
+        padding-left: 25px;
+        font-weight : 300;
+        font-size   : 24px;
+        line-height : 29px;
+    }
+    
+    &__perks-item {
+        margin-bottom: 16px;
+    }
+}
+
+.button__svg{
+    fill:$white-color
+}

@@ -1,0 +1,39 @@
+
+.privilege {
+    background-color: $black-bkg;
+    margin-top      : 95px;
+    &__list {
+        display        : flex;
+        justify-content: space-between;
+    }
+    
+    &__item {
+        width         : 360px;
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+    }
+    
+    &__item-icon {
+        height : 44px;
+        padding: 103px 0 28px 0;
+    }
+    
+    &__title {
+        text-transform: capitalize;
+        font-size     : 20px;
+        line-height   : 24px;
+        padding-bottom: 16px;
+        color         : $cards-bkg;
+    }
+    
+    &__text {
+        font-weight   : 300;
+        font-size     : 14px;
+        line-height   : 17px;
+        text-align    : center;
+        color         : $cards-bkg;
+        padding-bottom: 106px;
+    }
+}
+

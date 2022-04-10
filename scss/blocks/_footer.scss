@@ -1,0 +1,154 @@
+.footer {
+    background     : url(../img/footer/photosubscribe.jpg);
+    background-size: cover;
+    min-height     : 448px;
+
+    &__wrp {
+        display        : flex;
+        align-items    : flex-start;
+        justify-content: space-around;
+        margin-top     : 87px;
+    }
+    
+    &__review-item {
+        display       : flex;
+        align-items   : center;
+        flex-direction: column;
+    }
+    
+    &__review-icon {
+        padding-bottom: 30px;
+    }
+    
+    &__review-text {
+        font-size     : 20px;
+        line-height   : 24px;
+        text-align    : center;
+        width         : 360px;
+        padding-bottom: 162px;
+        text-transform: capitalize;
+        color         : $black-bkg;
+    }
+    
+    &__review {
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+    }
+    
+    &__form {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+        padding-top   : 45px;
+    }
+    
+    &__form-title {
+        font-weight   : 700;
+        font-size     : 24px;
+        line-height   : 40px;
+        text-align    : center;
+        text-transform: uppercase;
+        color         : $black-bkg;
+    }
+    
+    &__form-text {
+        font-size     : 16px;
+        font-weight   : 400;
+        line-height   : 30px;
+        text-align    : center;
+        text-transform: uppercase;
+        color         : $black-bkg;
+        margin-bottom : 20px;
+    }
+    &__socials {
+        background-color: $black-bkg;
+    
+    }
+    
+    &__socials-wrp {
+        height         : 80px;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+    }
+    
+    &__socials-copy {
+        font-size     : 16px;
+        line-height   : 19px;
+        text-transform: capitalize;
+        color         : $white-color;
+    }
+    
+    
+    
+    &__socials-list {
+        display: flex;
+    }
+    
+    &__socials-item {
+        margin          : 0 7px 0 0;
+        background-color: $white-color;
+        width           : 30px;
+        height          : 30px;
+    }
+    
+    &__socials-item:hover {
+        background-color: $border;
+    }
+    
+    &__socials-link {
+        width          : 30px;
+        height         : 30px;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+    }
+    
+    &__socials-item:hover &__icon,
+    &__socials-item:focus &__icon {
+        fill: #FFFFFF;
+    }
+    
+    &__icon {
+        fill: #000000;
+    }
+    
+    &__form-intex {
+        height          : 55px;
+        padding-left    : 20px;
+        background-color: $footer-btn;
+        text-transform  : capitalize;
+    
+        border-top-left-radius   : 30px;
+        border-bottom-left-radius: 30px;
+        border                   : 1px solid $footer-btn;
+    }
+    
+    &__form-button {
+        background-color          : $pink-color;
+        text-transform            : capitalize;
+        padding                   : 20px;
+        border-top-right-radius   : 30px;
+        border-bottom-right-radius: 30px;
+        border                    : 1px solid $pink-color;
+        font-size                 : 14px;
+        line-height               : 17px;
+        text-align                : center;
+        color                     : $white-color;
+    }
+    &__form-button:hover,
+    &__form-button:focus{
+        border          : 1px solid $border;
+        background-color: $border;
+        color           : $white-color;
+    }
+    &__form-button:active{
+        opacity: 0.7;
+    }
+    
+    &__form-small {
+        display: flex;
+    }
+}
+
