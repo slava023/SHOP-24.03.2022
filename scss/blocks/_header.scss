@@ -10,22 +10,22 @@
         min-height     : 75px;
         justify-content: space-between;
     }
-    
+
     &__container {
         display    : flex;
         align-items: flex-end;
     }
-    
+
     &__logo {
         margin: 0 31px 0 0;
     }
-    
+
     &__form {
         display        : flex;
         flex-direction : row-reverse;
         justify-content: flex-start;
     }
-    
+
     &__form-input {
         font-size       : 14px;
         font-weight     : 300;
@@ -35,38 +35,40 @@
         border          : none;
         background-color: transparent;
         color           : $white-color;
+      
     }
-    
+
     &__form-input:hover,
     &__form-input:focus,
     &__form-input:active {
         border       : 1px solid $border;
         border-radius: 20px;
     }
-    
+
     &__burger:hover {
         fill: $border;
     }
-    
+
     &__icon {
         fill: $white-color;
     }
-    
+
     &__menu-list {
         display    : flex;
         align-items: center;
     }
-    
+
     &__button-link {
         border          : none;
         background-color: transparent;
+      
     }
-    
+
     &__burger {
         border          : none;
         background-color: transparent;
     }
-    
+
     &__button-link:hover &__icon,
     &__burger:hover &__icon,
     &__link:hover &__icon,
@@ -75,15 +77,15 @@
     &__link:focus &__icon {
         fill: $border;
     }
-    
+
     &__button-link:active &__icon,
     &__burger:active &__icon,
     &__link:active &__icon {
         opacity: 0.7;
     }
-    
-    
-    
+
+
+
     &__nav {
         position  : absolute;
         min-height: 764px;
@@ -95,7 +97,7 @@
         box-shadow: -1px 3px 13px #ADADAD;
         ;
     }
-    
+
     &__nav-title {
         font-weight   : 900;
         text-transform: uppercase;
@@ -103,8 +105,15 @@
         font-size     : 14px;
         line-height   : 17px;
     }
+
     &__link {
         margin: 0 0 0 33px;
+        @include mobile {
+            display: none;
+        }
     }
 }
 
+label[id*=none] {
+    display: none;
+}

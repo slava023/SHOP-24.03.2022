@@ -1,8 +1,8 @@
-.cart{
+.cart {
     &__wrp {
         background-color: $pink-bkg;
     }
-    
+
     &__title {
         font-weight   : 400;
         font-size     : 24px;
@@ -13,37 +13,96 @@
         align-items   : center;
         color         : $border;
     }
-    
+
     &__shopping {
         display        : flex;
         flex-direction : row;
         justify-content: space-between;
         margin-top     : 96px;
-    
+
+        @include mid-tablet {
+            flex-direction: column;
+            align-items   : center;
+        }
     }
-    
+
     &__items {
         flex-direction: column;
         display       : flex;
-    
+
     }
-    
+
     &__item {
         flex-direction: row;
         display       : flex;
         margin-bottom : 40px;
-        width         : 652px;
+        width         : 720px;
         box-shadow    : 4px 1px 20px $pink-bkg;
+        position      : relative;
+
+        @include mobile {
+            width: 100%;
+        }
     }
-    
-    
-    
+
+    &__item-img {
+        @include mobile {
+            width: 34%;
+        }
+    }
+
     &__item-pos {
         display       : flex;
         flex-direction: column;
         padding-left  : 31px;
+
+        @include mobile {
+            padding-left: 17px;
+        }
     }
-    
+
+    &__item-icon {
+        fill     : $black-bkg;
+        width    : 15px;
+        height   : 15px;
+        transform: translate(-6%, 7%);
+
+        @include mobile {
+            width    : 10px;
+            height   : 10px;
+            transform: translate(-50%, -28%);
+
+        }
+    }
+
+    &__item-close {
+        content         : '';
+        border          : none;
+        background-color: transparent;
+        transform       : translate(-50%, -50%);
+        width           : 30px;
+        height          : 30px;
+        position        : absolute;
+        top             : 30px;
+        right           : 10px;
+
+        @include mobile {
+            width    : 15px;
+            height   : 15px;
+            transform: translate(-50%, -100%);
+        }
+    }
+
+    &__item-close:hover &__item-icon,
+    &__item-close:focus &__item-icon {
+        fill: $border;
+    }
+
+    &__item-close::after &__item {
+        display: none;
+    }
+
+
     &__item-title {
         text-transform: uppercase;
         font-weight   : 400;
@@ -52,26 +111,50 @@
         line-height   : 29px;
         color         : $black-bkg;
         padding       : 22px 0 42px 0px;
+
+        @include mobile {
+            font-weight: 400;
+            font-size  : 16px;
+            line-height: 19px;
+            width      : 140px;
+            padding    : 13px 0 25px 0px;
+        }
     }
-    
-    
+
+
     &__item-lable {
         text-transform: capitalize;
         font-weight   : 400;
         font-size     : 22px;
         line-height   : 26px;
         color         : $blak-gray-color;
-    
+
+        @include mobile {
+            font-weight: 400;
+            font-size  : 14px;
+            line-height: 17px;
+        }
+
     }
+
     &__item-input {
         padding-bottom: 6px;
     }
+
     &__buttons {
         display        : flex;
         justify-content: space-between;
         margin-bottom  : 129px;
+
+        @include tablet {
+            justify-content: space-around;
+        }
+
+        @include mobile {
+            justify-content: space-between;
+        }
     }
-    
+
     &__button {
         background-color: transparent;
         border          : 1px solid $gray-color;
@@ -82,25 +165,45 @@
         color           : $black-bkg;
         width           : 235px;
         padding         : 16px 0;
+
+        @include mobile {
+            width         : 160px;
+            font-weight   : 400;
+            font-size     : 12px;
+            line-height   : 14px;
+            text-transform: capitalize;
+            padding       : 9px 18px;
+        }
     }
-    
+
     &__button:hover,
     &__button:focus {
         border          : $border;
         color           : $white-color;
         background-color: $pink-color;
     }
-    
+
     &__adress {
-        width: 358px;
+        width: 360px;
+
+        @include mid-tablet {
+            width          : auto;
+            justify-content: space-between;
+            display        : flex;
+            margin-bottom  : 98px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
-    
+
     &__adress-fieldset {
         display       : flex;
         flex-direction: column;
         width         : 358px;
     }
-    
+
     &__adress-title {
         margin-bottom : 21px;
         text-transform: uppercase;
@@ -109,12 +212,13 @@
         line-height   : 19px;
         color         : $black-bkg;
     }
-    
+
     &__adress-input {
-        margin-bottom: 21px;
-        height: 40px;
+        margin-bottom : 21px;
+        height        : 40px;
         text-transform: uppercase;
     }
+
     &__adress-button {
         margin-bottom   : 57px;
         margin-top      : 3px;
@@ -127,43 +231,56 @@
         line-height     : 13px;
         padding         : 10px 15px;
     }
-    
-    
+
+
     &__adress-button:hover,
     &__adress-button:focus {
         border          : 1px solid $border;
         background-color: $pink-color;
         color           : $white-color;
     }
-    
+
     &__checkout {
         background-color: $gray-bkg;
+
+        @include mid-tablet {
+            margin-top : 40px;
+            margin-left: 40px;
+            width      : 360px;
+            height     : 214px;
+        }
+
+        @include mobile {
+            margin-top : 0;
+            margin-left: 0;
+        }
     }
-    
+
     &__container {
         padding: 39px 34px 42px;
     }
-    
+
     &__sut {
         display       : flex;
         flex-direction: column;
         align-items   : flex-end;
     }
+
     &__sut-input {
         margin-bottom: 12px;
     }
-    
+
     &__checkout-button {
-    
+
         width           : 100%;
         text-transform  : uppercase;
         padding         : 15px 42px;
         border          : 1px solid $border;
         background-color: $pink-color;
         color           : $white-color;
-    
+
     }
-    
+
     &__border {
         margin-top   : 9px;
         margin-bottom: 17px;
@@ -171,14 +288,14 @@
         width        : 100%;
         height       : 1px;
     }
-    
+
     &__checkout-button:hover {
         background-color: transparent;
         border          : 1px solid $black-bkg;
         color           : $black-bkg;
-    
+
     }
-    
+
     &__checkout-button:focus {
         background-color: transparent;
         border          : 1px solid $black-bkg;
@@ -187,20 +304,37 @@
 }
 
 
-select{
-    border: none;
+select {
+    border        : none;
     text-transform: capitalize;
-    font-size: 18px;
-    color: $gray-color;
+    font-size     : 18px;
+    color         : $gray-color;
+
+    @include mobile {
+        font-weight: 400;
+        font-size  : 14px;
+        line-height: 17px;
+    }
 }
-input[id*=shop]{
+
+input[id*=shop] {
     border: none;
-  
+
+    @include mobile {
+        width: 55px;
+    }
 }
-input[id*=shop]::placeholder{
+
+input[id*=shop]::placeholder {
     font-size: 18px;
-    color: $pink-color;
+    color    : $pink-color;
+
+    @include mobile {
+        font-size: 12px;
+    }
+
 }
+
 input[type=number] {
     color       : $blak-gray-color;
     font-weight : 500;
@@ -208,19 +342,31 @@ input[type=number] {
     border      : 1px solid $blak-gray-color;
     margin-left : 24px;
     padding-left: 10px;
-    width       : 35px;
+    width       : 19px;
+
+    @include mobile {
+        font-weight: 400;
+        font-size  : 12px;
+        line-height: 12px;
+        width      : 15px;
+        margin-left: 0px;
+        border     : none;
+    }
 }
-label[id*=sipping]{
+
+label[id*=sipping] {
     display: none;
 }
-label[id*=sub]{
+
+label[id*=sub] {
     text-transform: uppercase;
 }
+
 input[id*=sub] {
-    border: none;
+    border          : none;
     background-color: transparent;
     text-transform  : uppercase;
-    width           : 26px;
+    width           : 30px;
     margin-left     : 25px;
 }
 
@@ -228,9 +374,10 @@ input[id*=sub]::placeholder {
     font-size: 12px;
     color    : $blak-gray-color;
 }
+
 input[id*=grand] {
-    
-    border: none;
+
+    border          : none;
     background-color: transparent;
     text-transform  : uppercase;
     width           : 38px;
@@ -238,9 +385,10 @@ input[id*=grand] {
 }
 
 input[id*=grand]::placeholder {
-    color: $border;
+    color    : $border;
     font-size: 17px;
 }
+
 label[id*=grand] {
     text-transform: uppercase;
     font-weight   : 400;

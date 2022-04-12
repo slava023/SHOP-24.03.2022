@@ -4,7 +4,8 @@ body {
   font-size: 14px;
   line-height: 20px;
   font-style: normal;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 .visually-hidden {
   position: absolute;
@@ -16,13 +17,16 @@ body {
   padding: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  margin: -1px; }
+  margin: -1px;
+}
 
 .container {
-  width: 1140px;
-  margin: 0 auto; }
+  max-width: 1140px;
+  margin: 0 auto;
+}
 
+#media
 label[id*=none] {
-  display: none; }
-
+  display: none;
+}
 /*# sourceMappingURL=general.css.map */

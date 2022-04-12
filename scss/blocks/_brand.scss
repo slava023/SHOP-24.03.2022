@@ -1,19 +1,20 @@
 .brand {
     display         : flex;
     background-color: $pink-bkg;
+
     &__img {
-        width : 800px;
+        width : 50%;
         height: 765px;
-    
+
     }
-    
+
     &__title-wrp {
-        flex-grow  : 1;
+
         padding    : 0 0 0 92px;
         display    : flex;
         align-items: center;
     }
-    
+
     &__title {
         color         : $black-bkg;
         border-left   : 12px solid $pink-color;
@@ -23,16 +24,77 @@
         line-height   : 58px;
         text-transform: uppercase;
     }
-    
+
     &__title-lower {
         font-size  : 32px;
         font-weight: 700;
         line-height: 38px;
         display    : block;
     }
-    
+
     &__title-pink {
         color: $pink-color;
     }
 }
 
+// планшет//
+@media (max-width:$tablet-width) {
+    .brand {
+        &__img {
+            height: 100%;
+        }
+        &__title {
+            font-size     : 44px;
+            font-weight   : 900;
+            line-height   : 52px;
+           
+        }
+        &__title-lower {
+            font-size  : 24px;
+            font-weight: 700;
+            line-height: 29px;
+        }
+    }
+}
+
+// 1200px
+@media (max-width:$tablet-mid-width) {
+    .brand {
+        &__img {
+            height: 100%;
+        }
+        &__title-wrp {
+            
+            padding: 0 0;
+
+        }
+    }
+}
+
+// мобилка//
+@media (max-width:$mobile-width) {
+    .brand {
+        justify-content: center;
+
+        &__img {
+            display: none;
+        }
+
+        &__title-wrp {
+            height : 360px;
+            padding: 0 56px;
+        }
+        &__title {
+            font-size     : 38px;
+            font-weight   : 900;
+            line-height   : 45px;
+           
+        }
+        &__title-lower {
+            font-size  : 20px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+       
+    }
+}

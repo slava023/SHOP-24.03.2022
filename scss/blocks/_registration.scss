@@ -1,8 +1,8 @@
-.registration{
+.registration {
     &__wpr {
         background-color: $pink-bkg;
     }
-    
+
     &__title {
         font-weight   : 400;
         font-size     : 24px;
@@ -13,51 +13,57 @@
         align-items   : center;
         color         : $border;
     }
-    
+
     &__perks-list {
         margin    : 0;
         list-style: none;
     }
-    
+
     &__perks-item {
         position: relative;
     }
-    
+
     &__perks-item:before {
         content: '';
         width  : 15px;
         height : 15px;
-    
+
         position        : absolute;
         top             : 5px;
         left            : -25px;
         background-image: url(../img/registration/perks.png);
         background-size : 15px 15px;
     }
-    
+
     &__flex {
         display        : flex;
         justify-content: space-between;
         margin-top     : 64px;
+        @include mobile{
+            flex-direction: column;
+        }
     }
-    
+
     &__form {
         max-width     : 360px;
         display       : flex;
         flex-direction: column;
+        @include mobile{
+          max-width: 100%;
+        }
     }
     
-    
+
     &__form-group {
         display       : flex;
         flex-direction: column;
     }
-    
+
     &__perks {
         display       : flex;
         flex-direction: column;
     }
-    
+
     &__form-title {
         text-transform: capitalize;
         font-weight   : 300;
@@ -66,7 +72,7 @@
         color         : $black-bkg;
         margin-bottom : 20px;
     }
-    
+
     &__form-input {
         border        : 1px solid $text;
         text-transform: capitalize;
@@ -78,7 +84,7 @@
         margin-bottom : 20px;
         color         : $text;
     }
-    
+
     &__form-checkbox {
         margin       : 10px 0 30px 0;
         font-weight  : 300;
@@ -86,10 +92,12 @@
         line-height  : 13px;
         border-radius: 50%;
     }
-    &__form-text:first-letter{
+
+    &__form-text:first-letter {
         text-transform: uppercase;
-       
+
     }
+
     &__form-text {
         font-weight  : 300;
         font-size    : 13px;
@@ -97,7 +105,7 @@
         color        : $text;
         margin-bottom: 40px;
     }
-    
+
     &__form-btn {
         width           : 167px;
         background-color: $border;
@@ -109,26 +117,34 @@
         color           : $white-color;
         margin-bottom   : 95px;
     }
+
     &__form-btn:hover,
-    &__form-btn:focus{
-        border: 1px solid $black-bkg;
+    &__form-btn:focus {
+        border          : 1px solid $black-bkg;
         background-color: transparent;
-        color: $black-bkg;
+        color           : $black-bkg;
     }
-    &__form-btn:active{
+
+    &__form-btn:active {
         opacity: 0.7;
     }
-    
-    
+
+
     &__form-btn:hover .button__svg,
-    &__form-btn:focus .button__svg{
-    fill: $black-bkg;
+    &__form-btn:focus .button__svg {
+        fill: $black-bkg;
     }
-    
+
     &__perks {
         max-width: 652px;
+        @include tablet{
+            padding-left: 30px;
+        }
+        @include mobile{
+            padding-left: 0;
+        }
     }
-    
+
     &__perks-title {
         text-transform: uppercase;
         font-weight   : 300;
@@ -136,30 +152,50 @@
         line-height   : 29px;
         margin-bottom : 22px;
     }
-    
+
     &__perks-text {
         font-weight  : 300;
         font-size    : 24px;
         line-height  : 29px;
         margin-bottom: 22px;
+
+        @include tablet {
+            font-weight: 300;
+            font-size  : 16px;
+            line-height: 19px;
+        }
     }
-    
+
     &__perks-text::first-letter {
         text-transform: uppercase;
     }
-    
+
     &__perks-list {
         padding-left: 25px;
         font-weight : 300;
         font-size   : 24px;
         line-height : 29px;
     }
-    
+
     &__perks-item {
         margin-bottom: 16px;
+
+        @include tablet {
+            font-weight: 300;
+            font-size  : 16px;
+            line-height: 19px;
+        }
     }
 }
 
-.button__svg{
-    fill:$white-color
+.button__svg {
+    fill: $white-color
+}
+
+label[id*=genus]{
+    font-size: 14px;
+    text-transform: capitalize;
+}
+input[id*=male]{
+    margin-right: 15px;
 }

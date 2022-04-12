@@ -21,21 +21,13 @@ body {
 }
 
 .container {
-    width : 1140px;
-    margin: 0 auto;
+    width: 1140px;
+    margin   : 0 auto;
+
+    @include tablet {
+        width: 91%;
+    }
 }
-
-
-label[id*=none]{
-    display: none;
-}
-
-
-
-
-
-
-
 
 
 

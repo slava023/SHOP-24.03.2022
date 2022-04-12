@@ -8,6 +8,11 @@
         align-items    : flex-start;
         justify-content: space-around;
         margin-top     : 87px;
+        @include tablet{
+            align-items: center;
+            flex-direction: column;
+            margin-top     : 53px;
+        }
     }
     
     &__review-item {
@@ -28,6 +33,10 @@
         padding-bottom: 162px;
         text-transform: capitalize;
         color         : $black-bkg;
+        @include tablet{
+            padding-bottom: 48px;
+            width         : 100%;
+        }
     }
     
     &__review {
@@ -71,6 +80,11 @@
         display        : flex;
         justify-content: space-between;
         align-items    : center;
+        @include mobile{
+            height: 100%;
+            flex-direction: column-reverse;
+            justify-content:  space-evenly;
+        }
     }
     
     &__socials-copy {
@@ -78,12 +92,18 @@
         line-height   : 19px;
         text-transform: capitalize;
         color         : $white-color;
+        @include mobile{
+            padding-bottom: 9px;
+        }
     }
     
     
     
     &__socials-list {
         display: flex;
+        @include mobile{
+            padding: 40px;
+        }
     }
     
     &__socials-item {
@@ -136,6 +156,9 @@
         line-height               : 17px;
         text-align                : center;
         color                     : $white-color;
+        @include tablet{
+            margin-bottom: 140px;
+        }
     }
     &__form-button:hover,
     &__form-button:focus{
