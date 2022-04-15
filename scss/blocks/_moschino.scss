@@ -1,0 +1,125 @@
+.moschino {
+    position        : relative;
+    top             : -64px;
+    background-color: $white-color;
+    border          : 1px solid $gray-color;
+    max-width       : 1140px;
+    margin          : 0 auto;
+
+    @include tablet {
+        top: 0;
+    }
+
+    &__wrp {
+
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+    }
+
+    &__title {
+        font-weight   : 300;
+        font-size     : 14px;
+        line-height   : 17px;
+        color         : $border;
+        text-transform: uppercase;
+        padding-top   : 64px;
+        padding-bottom: 12px;
+    }
+
+    &__bordor-min {
+        border       : 1px solid $border;
+        width        : 63px;
+        margin-bottom: 12px;
+
+    }
+
+    &__subtitle {
+        font-weight   : 300;
+        font-size     : 18px;
+        line-height   : 22px;
+        color         : $sales-bkg;
+        text-transform: uppercase;
+        padding-bottom: 48px;
+    }
+
+    &__text {
+        font-weight   : 300;
+        font-size     : 14px;
+        line-height   : 17px;
+        text-align    : center;
+        color         : $sales-bkg;
+        text-transform: capitalize;
+        max-width     : 555px;
+        padding-bottom: 32px;
+
+    }
+
+    &__form {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+    }
+
+    &__summ {
+        font-weight   : 300;
+        font-size     : 24px;
+        line-height   : 29px;
+        color         : $border;
+        padding-bottom: 65px;
+    }
+
+    &__border-max {
+        border       : 1px solid $gray-bkg;
+        width        : 630px;
+        margin-bottom: 65px;
+
+        @include tablet {
+            width: 50%;
+        }
+    }
+
+    &__form-label {
+        text-transform: uppercase;
+        font-weight   : 400;
+        font-size     : 14px;
+        line-height   : 17px;
+        color         : $gray-color;
+    }
+
+    &__button {
+        align-items     : center;
+        display         : flex;
+        margin-top      : 48px;
+        margin-bottom   : 65px;
+        display         : flex;
+        padding         : 11px 56px 11px 25px;
+        font-size       : 16px;
+        line-height     : 19px;
+        color           : $border;
+        border          : 1px solid $border;
+        background-color: transparent;
+
+    }
+
+    &__icon {
+        margin-right: 22px;
+        fill        : $border;
+    }
+
+    &__button:hover,
+    &__button:focus {
+        border          : 1px solid $border;
+        background-color: $border;
+        color           : $white-color;
+    }
+
+    &__button:active {
+        opacity: 0.7;
+    }
+
+    &__button:hover .moschino__icon,
+    &__button:focus .moschino__icon {
+        fill: $white-color;
+    }
+}

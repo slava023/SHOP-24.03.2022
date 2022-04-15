@@ -1489,4 +1489,185 @@ input[id*=male] {
     height: 111px;
   }
 }
+
+.product__wpr {
+  background-color: #F1E4E6;
+}
+
+.product__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product__nav {
+  text-transform: uppercase;
+  display: flex;
+}
+
+.product__link {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #222222;
+}
+
+.product__link-activ {
+  color: #FF6A6A;
+  font-weight: 500;
+}
+
+.product__link:hover, .product__link:focus {
+  color: #FF6A6A;
+}
+
+.product__link:active {
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.product__span {
+  margin: 0 8px;
+}
+
+.product__span-clocs {
+  display: none;
+}
+
+.product__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  text-transform: uppercase;
+  height: 148px;
+  align-items: center;
+  color: #FF6A6A;
+}
+
+.moschino {
+  position: relative;
+  top: -64px;
+  background-color: #FFFFFF;
+  border: 1px solid #9F9F9F;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1599px) {
+  .moschino {
+    top: 0;
+  }
+}
+
+.moschino__wrp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.moschino__title {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FF6A6A;
+  text-transform: uppercase;
+  padding-top: 64px;
+  padding-bottom: 12px;
+}
+
+.moschino__bordor-min {
+  border: 1px solid #FF6A6A;
+  width: 63px;
+  margin-bottom: 12px;
+}
+
+.moschino__subtitle {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4E4544;
+  text-transform: uppercase;
+  padding-bottom: 48px;
+}
+
+.moschino__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #4E4544;
+  text-transform: capitalize;
+  max-width: 555px;
+  padding-bottom: 32px;
+}
+
+.moschino__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.moschino__summ {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FF6A6A;
+  padding-bottom: 65px;
+}
+
+.moschino__border-max {
+  border: 1px solid #F5F3F3;
+  width: 630px;
+  margin-bottom: 65px;
+}
+
+@media (max-width: 1599px) {
+  .moschino__border-max {
+    width: 50%;
+  }
+}
+
+.moschino__form-label {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9F9F9F;
+}
+
+.moschino__button {
+  align-items: center;
+  display: flex;
+  margin-top: 48px;
+  margin-bottom: 65px;
+  display: flex;
+  padding: 11px 56px 11px 25px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FF6A6A;
+  border: 1px solid #FF6A6A;
+  background-color: transparent;
+}
+
+.moschino__icon {
+  margin-right: 22px;
+  fill: #FF6A6A;
+}
+
+.moschino__button:hover, .moschino__button:focus {
+  border: 1px solid #FF6A6A;
+  background-color: #FF6A6A;
+  color: #FFFFFF;
+}
+
+.moschino__button:active {
+  opacity: 0.7;
+}
+
+.moschino__button:hover .moschino__icon,
+.moschino__button:focus .moschino__icon {
+  fill: #FFFFFF;
+}
 /*# sourceMappingURL=style.css.map */
