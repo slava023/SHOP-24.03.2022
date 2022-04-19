@@ -3,12 +3,14 @@
     min-height      : 40px;
     display         : flex;
     justify-content : flex-end;
+    position: relative;
 
     &__wrp {
         display        : flex;
         align-items    : center;
         min-height     : 75px;
         justify-content: space-between;
+        
     }
 
     &__container {
@@ -35,7 +37,7 @@
         border          : none;
         background-color: transparent;
         color           : $white-color;
-      
+
     }
 
     &__form-input:hover,
@@ -61,7 +63,7 @@
     &__button-link {
         border          : none;
         background-color: transparent;
-      
+
     }
 
     &__burger {
@@ -95,8 +97,16 @@
         background: white;
         display   : none;
         box-shadow: -1px 3px 13px #ADADAD;
-        ;
+       
+        z-index: 1;
     }
+    &__burger:active+ &__nav{
+        transform: translateX(0);
+    }
+    
+
+   
+
 
     &__nav-title {
         font-weight   : 900;
@@ -108,10 +118,14 @@
 
     &__link {
         margin: 0 0 0 33px;
+
         @include mobile {
             display: none;
         }
     }
+
+
+
 }
 
 label[id*=none] {
